@@ -63,16 +63,6 @@ namespace EnemyAl.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Background_Game {
-            get {
-                object obj = ResourceManager.GetObject("Background Game", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Background_Game1 {
             get {
                 object obj = ResourceManager.GetObject("Background Game1", resourceCulture);

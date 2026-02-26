@@ -26,7 +26,8 @@ namespace EnemyAl.UI_Classes
             return new PictureBox()
             {
                 Image = image,
-                Size = new Size(50, 55),
+                Size = new Size(70, 75),
+                BackColor = Color.Transparent,
                 SizeMode = PictureBoxSizeMode.Zoom
             };
         }
@@ -50,6 +51,12 @@ namespace EnemyAl.UI_Classes
                     pictureBox.Image = Properties.Resources.Player;
                     break;
             }
+
+            int maxX = pictureBox.Parent.ClientSize.Width - pictureBox.Width;
+            int maxY = pictureBox.Parent.ClientSize.Height - pictureBox.Height;
+
+            pos.X = Math.Max(0, Math.Min(pos.X, maxX));
+            pos.Y = Math.Max(0, Math.Min(pos.Y, maxY));
 
             UpdateLocations(pos);
         }

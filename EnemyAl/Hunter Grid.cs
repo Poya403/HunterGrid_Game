@@ -7,7 +7,7 @@ namespace EnemyAl
 {
     public partial class Form1 : Form
     {
-        private int enemeyCount = 3;
+        private int enemeyCount = 4;
         private int playerCount = 1;
         private int level = 1;
         private bool isGameOver = false;
@@ -15,6 +15,7 @@ namespace EnemyAl
         private DateTime lastShotTime = DateTime.MinValue;
         private int shootCooldown = 6;
         private int score = 0;
+        private int highScore = 0;
 
         private Dictionary<Enemy, EnemyView> enemyViews = new Dictionary<Enemy, EnemyView>();
         private PlayerView playerView;
@@ -41,7 +42,10 @@ namespace EnemyAl
         }
 
         private void UpdateLabel() {
+            if (score > highScore) highScore = score;
+
             lblScore.Text = $"Score : {score}";
+            lblHighScore.Text = $"High Score : {highScore}";
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

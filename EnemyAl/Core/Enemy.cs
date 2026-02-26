@@ -13,7 +13,7 @@ namespace EnemyAl.Class
         private int chaseDistance;
         private int fleeDistance;
 
-        public Enemy(int speed = 5, int chaseDistance = 1000, int fleeDistance = 200)
+        public Enemy(int speed = 7, int chaseDistance = 1000, int fleeDistance = 200)
         {
             this.speed = speed;
             this.chaseDistance = chaseDistance;
@@ -32,10 +32,10 @@ namespace EnemyAl.Class
                 int oy = other.Y - enemyPos.Y;
                 double d = Math.Sqrt(ox * ox + oy * oy);
 
-                if (d < 50 && d > 0)
+                if (d < 80 && d > 0)
                 {
-                    dx -= ox / 4;
-                    dy -= oy / 4;
+                    dx -= ox / 3;
+                    dy -= oy / 3;
                 }
             }
 
@@ -62,6 +62,6 @@ namespace EnemyAl.Class
             if (speed + value < 0) return;
             speed += value;
         }
-        public void ResetSpeed() => speed = 5;
+        public void ResetSpeed() => speed = 7;
     }
 }

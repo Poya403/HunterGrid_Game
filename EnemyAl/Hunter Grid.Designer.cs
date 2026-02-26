@@ -33,6 +33,7 @@
             gameTimer = new System.Windows.Forms.Timer(components);
             btnRestart = new Button();
             lblScore = new Label();
+            lblHighScore = new Label();
             SuspendLayout();
             // 
             // gameTimer
@@ -41,7 +42,7 @@
             // 
             // btnRestart
             // 
-            btnRestart.Location = new Point(22, 57);
+            btnRestart.Location = new Point(22, 60);
             btnRestart.Name = "btnRestart";
             btnRestart.Size = new Size(102, 43);
             btnRestart.TabIndex = 0;
@@ -52,12 +53,26 @@
             // lblScore
             // 
             lblScore.AutoSize = true;
+            lblScore.BackColor = Color.Transparent;
             lblScore.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblScore.Location = new Point(22, 9);
+            lblScore.ForeColor = Color.White;
+            lblScore.Location = new Point(421, 9);
             lblScore.Name = "lblScore";
             lblScore.Size = new Size(99, 31);
             lblScore.TabIndex = 1;
             lblScore.Text = "Score : 0";
+            // 
+            // lblHighScore
+            // 
+            lblHighScore.AutoSize = true;
+            lblHighScore.BackColor = Color.Transparent;
+            lblHighScore.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblHighScore.ForeColor = Color.White;
+            lblHighScore.Location = new Point(22, 9);
+            lblHighScore.Name = "lblHighScore";
+            lblHighScore.Size = new Size(154, 31);
+            lblHighScore.TabIndex = 2;
+            lblHighScore.Text = "High Score : 0";
             // 
             // Form1
             // 
@@ -65,6 +80,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Background_Game1;
             ClientSize = new Size(898, 869);
+            Controls.Add(lblHighScore);
             Controls.Add(lblScore);
             Controls.Add(btnRestart);
             DoubleBuffered = true;
@@ -82,5 +98,6 @@
         private System.Windows.Forms.Timer gameTimer;
         private Button btnRestart;
         private Label lblScore;
+        private Label lblHighScore;
     }
 }

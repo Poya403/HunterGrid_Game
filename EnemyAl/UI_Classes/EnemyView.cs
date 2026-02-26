@@ -15,8 +15,9 @@ namespace EnemyAl.UI_Classes
             return new PictureBox()
             {
                 Image = Properties.Resources.Enemy_Left,
-                Size = new Size(45, 55),
-                SizeMode = PictureBoxSizeMode.Zoom
+                Size = new Size(65, 75),
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BackColor = Color.Transparent,
             };
         }
         public bool CollidesWith(PlayerView player)
